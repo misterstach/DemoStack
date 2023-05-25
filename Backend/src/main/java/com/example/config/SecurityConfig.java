@@ -15,7 +15,7 @@ public class SecurityConfig
     {
         http
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/", "/home").permitAll()
+                        .requestMatchers("/", "/home", "/users").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin((form) -> form // la page n'existe pas encore > Angular
